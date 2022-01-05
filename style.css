@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://vgorode.ua/img/article/11494/30_main-v1612166603.jpg);
+    background-size: cover;
+}
+
+#weather{
+    position: fixed;
+    top: 200px;
+    left: 100px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+#weather div{
+    padding: 5px;
+}

@@ -1,5 +1,5 @@
 function Weather() {
-    this.api = fetch('http://api.weatherapi.com/v1/current.json?key=b677082ac19f45aca07212645220401&q=Kiev&aqi=no')
+    this.api = fetch('https://api.weatherapi.com/v1/current.json?key=b677082ac19f45aca07212645220401&q=Kiev&aqi=no')
     this.init = (this.api)
         .then((response) =>  response.json())
         .then((data) => {

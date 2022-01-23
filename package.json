@@ -1,0 +1,25 @@
+{
+  "name": "weather_kiev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "lru-cache": "^6.0.0",
+    "yallist": "^4.0.0",
+    "semver": "^7.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chebanro2807/weather_kiev.git"
+  },
+  "author": "anton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chebanro2807/weather_kiev/issues"
+  },
+  "homepage": "https://github.com/Chebanro2807/weather_kiev#readme"
+}

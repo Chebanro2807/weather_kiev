@@ -15,7 +15,16 @@
 </body>
 <script src="script.js"></script>
 <script>
-    const weatherInKyiv = new Weather()
-    weatherInKyiv.init
+    const kiev = new Weather('Kiev', 'b677082ac19f45aca07212645220401')
+    kiev.init.then(data => {
+        document.getElementById("weather").insertAdjacentHTML(
+            "beforeend", `
+            <div>country ${data.country}</div>
+            <div>country ${data.city}</div>
+            <div>temperature ${data.temp_c}</div>
+            <div>clouds ${data.cloud}</div>
+            <div>humidity ${data.humidity}</div>
+            <div>condition ${data.condition}</div>
+`)})
 </script>
 </html>

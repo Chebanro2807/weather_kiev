@@ -13,6 +13,8 @@ function fetch(url) {
     })
 }
 
+export {fetch}
+
 // function Weather(city, token) {
 //   this.city = city;
 //   this.token = token;

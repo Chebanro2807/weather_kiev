@@ -1,17 +1,15 @@
 function fetch(url) {
     return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const xhr = new XMLHttpRequest()
-            xhr.open("GET", url);
-            xhr.send();
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState !== 4 || xhr.status !== 200) {
-                    return
-                }
-                const response = JSON.parse(xhr.response)
-                resolve(response)
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET", url);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState !== 4 || xhr.status !== 200) {
+                return
             }
-        }, 2000)
+            const response = JSON.parse(xhr.response)
+            resolve(response)
+        }
     })
 }
 

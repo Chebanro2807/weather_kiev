@@ -5,8 +5,7 @@ import { useState, useEffect } from 'react';
 function App() {
   const [weather, setWeather] = useState({});
 
-  useEffect(
-    function () {
+  useEffect(()=>{
     const kiev = fetch('https://api.weatherapi.com/v1/current.json?key=b677082ac19f45aca07212645220401&q=Kiev&aqi=no)')
     kiev.then((data) => {
       setWeather({
@@ -18,8 +17,8 @@ function App() {
        text: data.current.condition.text
       });
     });
-    },
-  );
+    console.log('!!!')
+    }, [])
   return (
   <div className='weather'>
     <div>country {weather.country}</div>

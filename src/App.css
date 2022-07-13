@@ -18,3 +18,16 @@ body{
 .weather div{
   padding: 5px;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  padding: 10px;
+  color: black;
+  text-decoration: none
+}
+

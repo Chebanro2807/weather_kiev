@@ -1,32 +1,16 @@
 import './App.css';
-import {fetch} from './fetch'
-import { useState, useEffect } from 'react';
+import {useWeather} from './useApi'
 
 function App() {
-  const [weather, setWeather] = useState({});
-
-  useEffect(()=>{
-    const kiev = fetch('https://api.weatherapi.com/v1/current.json?key=b677082ac19f45aca07212645220401&q=Kiev&aqi=no)')
-    kiev.then((data) => {
-      setWeather({
-       country: data.location.country,
-       name: data.location.name,
-       temp_c: data.current.temp_c,
-       cloud: data.current.cloud,
-       humidity: data.current.humidity,
-       text: data.current.condition.text
-      });
-    });
-    console.log('!!!')
-    }, [])
+  const onLine = useWeather()
   return (
   <div className='weather'>
-    <div>country {weather.country}</div>
-    <div>country {weather.name}</div>
-    <div>temperature {weather.temp_c}</div>
-    <div>clouds {weather.cloud}</div>
-    <div>humidity {weather.humidity}</div>
-    <div>condition {weather.text}</div>
+    <div>country {onLine.country}</div>
+    <div>country {onLine.name}</div>
+    <div>temperature {onLine.temp_c}</div>
+    <div>clouds {onLine.cloud}</div>
+    <div>humidity {onLine.humidity}</div>
+    <div>condition {onLine.text}</div>
   </div>
   );
 }
